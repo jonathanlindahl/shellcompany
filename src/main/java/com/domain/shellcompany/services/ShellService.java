@@ -20,12 +20,12 @@ public class ShellService
     
     public List<Shell> getByModel(String model)
     {
-        return (List<Shell>) shellRepository.findByModel(model);
+        return shellRepository.findByModel(model);
     }
     
     public List<Shell> getByName(String name)
     {
-        return (List<Shell>) shellRepository.findByName(name);
+        return shellRepository.findByName(name);
     }
     
     public Shell add(Shell shell)
