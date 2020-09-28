@@ -46,7 +46,7 @@ public class ShellcompanyApplication
 				ex.printStackTrace();
 			}
 			
-			shellRepository.deleteAll();
+			//shellRepository.deleteAll();
 		};
 	}
 }
