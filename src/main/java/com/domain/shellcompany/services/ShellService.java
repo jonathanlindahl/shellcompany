@@ -17,4 +17,9 @@ public class ShellService
     {
         return (List<Shell>) shellRepository.findAll();
     }
+    
+    public Shell add(Shell shell)
+    {
+        return shellRepository.save(shell);
+    }
 }
