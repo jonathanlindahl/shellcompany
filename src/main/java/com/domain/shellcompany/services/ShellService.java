@@ -18,6 +18,11 @@ public class ShellService
         return (List<Shell>) shellRepository.findAll();
     }
     
+    public List<Shell> getByModel(String model)
+    {
+        return (List<Shell>) shellRepository.findByModel(model);
+    }
+    
     public Shell add(Shell shell)
     {
         return shellRepository.save(shell);

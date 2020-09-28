@@ -8,4 +8,5 @@ import java.util.List;
 public interface ShellRepository extends CrudRepository<Shell, Long>
 {
     List<Shell> findByName(String name);
+    List<Shell> findByModel(String model);
 }

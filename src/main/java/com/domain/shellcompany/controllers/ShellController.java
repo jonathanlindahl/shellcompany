@@ -1,13 +1,12 @@
 package com.domain.shellcompany.controllers;
 
 import com.domain.shellcompany.models.Shell;
-import com.domain.shellcompany.repositories.ShellRepository;
 import com.domain.shellcompany.services.ShellService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Bean;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
@@ -22,6 +21,12 @@ public class ShellController
     public List<Shell> getShells()
     {
         return shellService.getAll();
+    }
+    
+    @GetMapping("/shellsbymodel")
+    public List<Shell> getByModel(@RequestParam String model)
+    {
+        return shellService.getByModel(model);
     }
     
     @PostMapping("/addshell")

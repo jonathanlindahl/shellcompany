@@ -19,18 +19,18 @@ public class ShellcompanyApplication
 	public CommandLineRunner shellTest(ShellRepository shellRepository)
 	{
 		return (args) -> {
-			shellRepository.save(
-					new Shell(
-							"test shell",
-							42,
-							"some manufacturer",
-							"some model"));
-			shellRepository.save(
-					new Shell(
-							"test shell1",
-							84,
-							"some manufacturer1",
-							"some model1"));
+//			shellRepository.save(
+//					new Shell(
+//							"testShell",
+//							42,
+//							"some manufacturer",
+//							"someModel"));
+//			shellRepository.save(
+//					new Shell(
+//							"testShell1",
+//							84,
+//							"some manufacturer1",
+//							"someModel1"));
 			
 			for (Shell s : shellRepository.findAll())
 				System.out.println(s.toString());
