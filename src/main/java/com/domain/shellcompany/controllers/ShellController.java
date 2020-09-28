@@ -29,6 +29,12 @@ public class ShellController
         return shellService.getByModel(model);
     }
     
+    @GetMapping("/shellsbyname")
+    public List<Shell> getByName(@RequestParam String name)
+    {
+        return shellService.getByName(name);
+    }
+    
     @PostMapping("/addshell")
     public Shell postShell(@RequestBody Shell shell)
     {

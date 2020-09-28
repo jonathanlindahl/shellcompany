@@ -23,6 +23,11 @@ public class ShellService
         return (List<Shell>) shellRepository.findByModel(model);
     }
     
+    public List<Shell> getByName(String name)
+    {
+        return (List<Shell>) shellRepository.findByName(name);
+    }
+    
     public Shell add(Shell shell)
     {
         return shellRepository.save(shell);
