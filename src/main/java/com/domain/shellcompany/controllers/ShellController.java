@@ -17,25 +17,25 @@ public class ShellController
     @Autowired
     ShellService shellService;
     
-    @GetMapping("/allshells")
+    @GetMapping("/shell/allshells")
     public List<Shell> getShells()
     {
         return shellService.getAll();
     }
     
-    @GetMapping("/shellsbymodel")
+    @GetMapping("/shell/shellsbymodel")
     public List<Shell> getByModel(@RequestParam String model)
     {
         return shellService.getByModel(model);
     }
     
-    @GetMapping("/shellsbyname")
+    @GetMapping("/shell/shellsbyname")
     public List<Shell> getByName(@RequestParam String name)
     {
         return shellService.getByName(name);
     }
     
-    @PostMapping("/addshell")
+    @PostMapping("/shell/addshell")
     public Shell postShell(@RequestBody Shell shell)
     {
         return shellService.add(shell);
